@@ -1,0 +1,15 @@
+You can write yielding functions like this:
+
+
+		
+public IEnumerator StepBy () {
+	Console.WriteLine("Hello from coroutine");
+	yield return true;
+	Console.WriteLine("This is another line");
+	yield return true;
+	Console.WriteLine("And the last line");
+	yield return new WaitForCount(5);
+	Console.WriteLine("Now I'm done");
+}
+
+
